@@ -1,52 +1,161 @@
 <!DOCTYPE html>
-<!-- CSS Stylesheets with Relative Paths -->
 <html lang="en-us">
     <head>
-        <!-- Required meta tags -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" 
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-        crossorigin="anonymous">
-        <title>Web Design Challenge</title>
-
-  <!-- In building this dashboard, we'll create individual pages for each plot and a means by which 
-    we can navigate between them. These pages will contain the visualizations and their corresponding explanations. 
-    We'll also have a landing page, a page where we can see a comparison of all of the plots, 
-    and another page where we can view the data used to build them. -->
-
-  <!-- You must use Bootstrap. This includes using the Bootstrap navbar component 
-    for the header on every page, the bootstrap table component for the data page, 
-    and the Bootstrap grid for responsiveness on the comparison page. -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./Resources/styles.css"> 
+        
+        <title>Web Visualization Dashboard</title>
 
     </head>
-    <body>
 
-        <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
-            <a href="#" class="navbar-brand">My Website</a>
+    <body>
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-light bg-light navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">Homepage</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">Homepage</a>
+                    <li class="navbar-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Visualizations/MaxTemp.html">Max Temperature</a>
+                            <a class="dropdown-item" href="Visualizations/Humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="Visualizations/Cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="Visualizations/Windspeed.html">Wind Speed</a>
+                        </div>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Blog</a>
+                        <a href="./Resources/Comparisons.html" class="nav-link">Comparisons</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">About Me</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="./Resources/Data.html" class="nav-link">Data</a>
                     </li>
                 </ul>
             </div>
-        </nav>>
-
-
         </nav>
-    </body>
+        <!-- End of Navbar Section -->
+       
+        <!-- Start of Container -->
+        <div class="container">
+            <section class="row">
+            <div class="col-md-8">
+                <article class="description-content">
+                    <br>
+                <h1 class="description-header">Latitude vs Four Weather Variables</h1>
+                <!-- <hr class="description-hr"/> -->
+                <img src="./Resources/Assets/Images/MaxTemp.png" class="img-thumbnail"/>
+                <p>This dashboard reflects the findings from a prior weather analysis of over 500 randomly selected cities. 
+                    The latitude of each city was plotted against four variables including: max temp, humidity, 
+                    cloudiness, and wind speed in order to analyze the respective relationships.
+                </p>
+                <p>The creation of this dashboard entailed the use of HTML, CSS, and Bootstrap to create a total of seven websites which include
+                    this landing page, four plots of the respective analyses, a comparison of all of the plots, and lastly a page reflecting
+                    the data used to build them.
+                </p>
+                </article>
+            </div>
+            
+    
+                <!-- Visualizations Section -->
+                <!-- <section id="imageNav-area">
+                <div class="imageNav-content">
+                    <h2 class= "imageNav-header">Visualizations</h2> -->
+                <div class= "col col-12 col-md-4 divbdy">
+                    <br>
+                    <h2>Visualizations</h2>
+                    <!-- <h2 class="imageNav-header">Visualizations</h2> -->
+                    <br>
+                    <div class='row'>
+                        <div class="col col-3 col-md-6">
+                        <hr>
+                        <a href="./Visualizations/MaxTemp.html"><img src="./Resources/Assets/images/MaxTemp.png" alt="Latitude vs. Max Temperature" class="img-fluid" class="img-thumbnail"></a>
+                        </div>   
+                        <div class="col col-3 col-md-6">
+                        <hr>
+                        <a href="./Visualizations/Humidity.html"><img src="./Resources/Assets/images/Humidity.png" alt="Latitude vs. Humidity" class="img-fluid" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col col-3 col-md-6">
+                        <hr>
+                        <a href="./Visualizations/Cloudiness.html"><img src="./Resources/Assets/images/Cloudiness.png" alt="Latitude vs. Cloudiness" class="img-fluid" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col col-3 col-md-6">
+                        <hr>
+                        <a href="./Visualizations/Windspeed.html"><img src="./Resources/Assets/images/Windspeed.png" alt="Latitude vs. Wind Speed" class="img-fluid" class="img-thumbnail"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- </section> -->
+                <!-- End of Visualizations Section -->
+    
+            </div>
+            </section>
+        </div>
+        <!-- End of Container -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- Website Requirements
+
+    You must use Bootstrap. This includes using the Bootstrap navbar component 
+    for the header on every page, the bootstrap table component for the data page, 
+    and the Bootstrap grid for responsiveness on the comparison page.
+
+The website must consist of 7 pages total, including:
+
+A landing page containing:
+
+An explanation of the project.
+Links to each visualizations page. There should be a sidebar containing preview images of each plot, 
+and clicking an image should take the user to that visualization.
+
+Four visualization pages, each with:
+
+A descriptive title and heading tag.
+The plot/visualization itself for the selected comparison.
+A paragraph describing the plot and its significance.
+
+
+A "Comparisons" page that:
+
+Contains all of the visualizations on the same page so we can easily visually compare them.
+Uses a Bootstrap grid for the visualizations.
+
+The grid must be two visualizations across on screens medium and larger, 
+and 1 across on extra-small and small screens.
+
+A "Data" page that:
+
+Displays a responsive table containing the data used in the visualizations.
+
+The table must be a bootstrap table component. Hint
+Link to responsive table documentation:https://getbootstrap.com/docs/4.3/content/tables/#responsive-tables
+The data must come from exporting the .csv file as HTML, or converting it to HTML. Try using a tool you already know, pandas. 
+Pandas has a nifty method approprately called to_html that allows you to generate a HTML table from a pandas dataframe. See the documentation here
+Link to pandas dataframe to html:https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.to_html.html
+
+The website must, at the top of every page, have a navigation menu that:
+
+Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+Contains a dropdown menu on the right of the navbar named "Plots" that provides a link to each individual visualization page.
+Provides two more text links on the right: "Comparisons," which links to the comparisons page, and "Data," which links to the data page.
+Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section (notice the background color change).
+
+Finally, the website must be deployed to GitHub pages.
+When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the GitHub repository. -->
